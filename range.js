@@ -5,9 +5,6 @@ function range(start, stop, step = 1) {
         start = 0;
     }
 
-    if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
-        return [];
-    }
 
     let result = [];
     let i;

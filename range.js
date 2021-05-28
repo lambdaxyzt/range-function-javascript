@@ -1,20 +1,17 @@
-function range(start, stop, step) {
+function range(start, stop, step = 1) {
     if (typeof stop == 'undefined') {
-        // one param defined
+        // if one parameter defined
         stop = start;
         start = 0;
-    }
-
-    if (typeof step == 'undefined') {
-        step = 1;
     }
 
     if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
         return [];
     }
 
-    var result = [];
-    for (var i = start; step > 0 ? i < stop : i > stop; i += step) {
+    let result = [];
+    let i;
+    for (i = start; step > 0 ? i < stop : i > stop; i += step) {
         result.push(i);
     }
 
